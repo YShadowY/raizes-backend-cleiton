@@ -6,6 +6,8 @@ const produtosRoutes = require("./modules/produtos/produtos.routes");
 const estoqueRoutes = require("./modules/estoque/estoque.routes");
 const pedidosRoutes = require("./modules/pedidos/pedidos.routes");
 const auditoriaRoutes = require("./modules/auditoria/auditoria.routes");
+const pagamentosRoutes = require("./modules/pagamentos/pagamentos.routes");
+const fidelidadeRoutes = require("./modules/fidelidade/fidelidade.routes");
 
 const authMiddleware = require("./middlewares/authMiddleware");
 
@@ -27,6 +29,8 @@ routes.use("/produtos", produtosRoutes);
 routes.use("/", estoqueRoutes);
 routes.use("/pedidos", pedidosRoutes);
 routes.use("/auditoria", auditoriaRoutes);
+routes.use("/pagamentos", pagamentosRoutes);
+routes.use("/", fidelidadeRoutes);
 
 routes.get("/usuarios/me", authMiddleware, (req, res) => {
   return res.status(200).json({
