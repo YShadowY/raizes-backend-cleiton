@@ -9,10 +9,6 @@ function errorHandler(err, req, res, next) {
     path: req.originalUrl
   };
 
-  if (process.env.NODE_ENV !== "production") {
-    response.stack = err.stack;
-  }
-
   return res.status(statusCode).json(response);
 }
 
