@@ -46,7 +46,7 @@ Antes de executar o projeto, é necessário ter instalado:
 Clone o repositório:
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/YShadowY/raizes-backend-cleiton.git
 cd raizes-backend-cleiton
 ```
 
