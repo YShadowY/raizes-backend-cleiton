@@ -15,6 +15,10 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
+app.get("/api-docs.json", (req, res) => {
+  return res.status(200).json(swaggerSpec);
+});
+
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use("/api", routes);
